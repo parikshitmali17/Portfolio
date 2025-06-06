@@ -10,17 +10,10 @@ import MediaCard from './Components/Card';
 function App() {
   return (
     <div className="App">
-    
-      <Navbar></Navbar>
-      
+    <Navbar></Navbar>
     <StreetLamp ></StreetLamp>
     <ServiceSection></ServiceSection>
     <Footer></Footer>
-    
- 
- 
-
-
     </div>
   );
 }
