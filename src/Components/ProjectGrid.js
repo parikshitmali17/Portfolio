@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsGrid = () => {
@@ -16,7 +16,7 @@ const ProjectsGrid = () => {
       liveLink: "",
       codeLink: "",
       tags: ["Patented", "Android", "AAC", "Assistive Tech"],
-      images: ["/Images/HOME.jpg", "/Images/MULTILINGUAL SUPPORT.jpg","/Images/DAILY ACTIVITIES ENGLISH.jpg" ], // 👈 Your images here
+      images: ["/Images/HOME.jpg", "/Images/MULTILINGUAL.jpg","/Images/DAILY.jpg" ], // 👈 Your images here
     },
     {
       title: "Movie Mania",
@@ -27,8 +27,8 @@ const ProjectsGrid = () => {
         "Built a responsive movie database app using React and TMDB API with features like search, details view, and favorites.",
       outcome:
         "Enhanced user experience through dynamic API integration and improved discoverability of trending movies.",
-      liveLink: "https://your-movie-app-link.vercel.app",
-      codeLink: "https://github.com/parikshitm123/movie-mania",
+      liveLink: "https://movie-mania-a-movie-database.vercel.app/",
+      codeLink: "https://github.com/parikshitmali17/MovieMania",
       tags: ["React", "TMDB API", "MUI", "Responsive UI"],
       images: [
         "/Images/Favourite Movies.png",
@@ -45,10 +45,10 @@ const ProjectsGrid = () => {
         "Developed a web-based mass mailer that automates dispatching bulk emails with a single click using Node.js.",
       outcome:
         "Increased email efficiency by 90% and reduced human error. Enabled scalable communication for events and announcements.",
-      liveLink: "https://event-app.vercel.app",
-      codeLink: "https://github.com/parikshitm123/event-app",
+      liveLink: "https://web-mass-mailer-dispatcher.vercel.app/",
+      codeLink: "https://github.com/parikshitmali17/Exposys-Intern-Deploy",
       tags: ["Node.js", "Mailing", "Automation", "Bootstrap"],
-      images: ["/Images/HOMEEMAIL.png", "/Images/Modal To guide.png","/Images/EmailUI.png"],
+      images: ["/Images/HOMEEMAIL.png", "/Images/Modal.png","/Images/EmailUI.png"],
     },
     {
   title: "Face Search AI App",
@@ -59,13 +59,13 @@ const ProjectsGrid = () => {
     "Developed a full-stack facial recognition app with a fully responsive React.js interface, secure backend with Node.js and Express, MongoDB CRUD, Stripe-powered payments, and support for both image and video uploads.",
   outcome:
     "Achieved 20% faster response time and 30% better user interaction with scalable, secure architecture, enhancing usability and monetization potential.",
-  liveLink: "", // Add your live link if deployed
-  codeLink: "https://github.com/parikshitm123/face-search-ai", // Replace with your actual repo URL
+  // liveLink: "", // Add your live link if deployed
+  // codeLink: "https://github.com/parikshitm123/face-search-ai", // Replace with your actual repo URL
   tags: [ "MERN", "Payment", "Full Stack Web Solution",],
   images: [
-    "/Images/FaceKeyFeatures.png",
-    "/Images/FaceSPayment.png",
-    "/Images/FaceSUsers.png"
+    "/Images/FaceKeyFeatures .png",
+    "/Images/FacePayment.png",
+    "/Images/FaceUsers.png"
   ],
 }
 ,
@@ -75,8 +75,8 @@ const ProjectsGrid = () => {
   problem: "New users often found it confusing to register and log in due to poor navigation flow and lack of validation feedback.",
   solution: "Built a user-friendly authentication interface with real-time validation, seamless navigation between login and signup, and a simple dashboard view upon authentication.",
   outcome: "Improved user experience with clear navigation, validated inputs, and consistent UX across auth pages — ensuring smoother onboarding.",
-  liveLink: "", // Add your deployment link here if hosted
-  codeLink: "https://github.com/parikshitm123/auth-ui-flow", // Replace with actual repo
+  liveLink: "https://login-signup-dashboard-cyan.vercel.app/",
+  codeLink: "https://github.com/parikshitmali17/Login-Signup-Dashboard", // Replace with actual repo
   tags: ["React", "UI/UX", "Login", "Signup", "Dashboard"],
   images: ["/Images/Dashboard.png", "/Images/Password Confrimation.png","/Images/Log In.png"],
 },
@@ -88,9 +88,9 @@ const ProjectsGrid = () => {
   solution:
     "Engineered a fully serverless event management platform using AWS services. Integrated features include event CRUD operations, user authentication, automated email notifications, and seamless UI with React.",
   outcome:
-    "Reduced backend maintenance to zero, enabled auto-scaling with AWS Lambda, and decreased operational costs while boosting reliability and developer agility.",
-  liveLink: "https://event-app.vercel.app", // Replace if different
-  codeLink: "https://github.com/parikshitm123/event-app", // Replace if private
+    "Ongoing Project",
+  liveLink: "http://event-serverless-management-system.s3-website.ap-south-1.amazonaws.com/", // Replace if different
+  codeLink: "https://github.com/parikshitmali17/Serverless-Management-System", // Replace if private
   tags: ["AWS", "Serverless", "Event Management",],
   images: [
     "/Images/ServerlessHome.png",
@@ -106,8 +106,8 @@ const ProjectsGrid = () => {
     "Built an intuitive form builder platform allowing teachers to dynamically create and manage question papers with multiple types including MCQ, Passage-based, Cloze, and Categorize questions. Features include real-time form previews, question categorization, and CRUD operations for question sets.",
   outcome:
     "Enabling educators to build structured assessments faster with better accuracy and flexibility.",
-  liveLink: "", // Add your live link if deployed
-  codeLink: "https://github.com/parikshitm123/form-builder-question-paper", // Replace with your actual repo
+  // liveLink: "", // Add your live link if deployed
+  // codeLink: "https://github.com/parikshitm123/form-builder-question-paper", // Replace with your actual repo
   tags: ["THIS IS ONGOING PROJECT"],
   
 }
@@ -119,16 +119,57 @@ const ProjectsGrid = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: 3,
-        justifyContent: "center",
-        padding: 2,
+        background: 'linear-gradient(135deg, #17175f 0%, #0e1428 100%)',
+        minHeight: '100vh',
+        paddingTop: 8,
+        paddingX: 2,
       }}
     >
-      {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} />
-      ))}
+      {/* 🔹 Centered Section Heading */}
+      <Box
+        sx={{
+          textAlign: "center",
+          marginBottom: 6,
+          color: "white",
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            fontFamily: "Montserrat, sans-serif",
+            marginBottom: 1,
+          }}
+        >
+          Our Work
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "#c0c0c0",
+            maxWidth: 600,
+            marginX: "auto",
+            fontStyle: "italic",
+          }}
+        >
+          Real-world solutions built with purpose and precision.
+        </Typography>
+      </Box>
+
+      {/* 🔹 Projects Grid */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 3,
+          justifyContent: "center",
+          paddingBottom: 6,
+        }}
+      >
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </Box>
     </Box>
   );
 };
