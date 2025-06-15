@@ -43,6 +43,7 @@ import ProjectsGrid from './Components/ProjectGrid';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import ProjectForm from './Components/ProjectForm';
+import Landing from './Components/Landing';
 
 function Home() {
   return (
@@ -66,7 +67,7 @@ function App() {
            <Route path="/contacts" element={<Contact></Contact>}></Route>
            <Route path="/submitProjectDetails" element={<ProjectForm></ProjectForm>}></Route>
         </Routes>
-        {/* <Contact></Contact> */}
+        {/* <Landing></Landing> */}
         <Footer />
       </Router>
     </div>

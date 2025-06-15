@@ -26,7 +26,7 @@ export default function BasicModal() {
    const navigate = useNavigate();
    function handleNavigate(){
     
-  navigate('/contact');
+  navigate('/contacts');
   // Give the page time to mount before scrolling
  handleOpen();
   setTimeout(() => {
