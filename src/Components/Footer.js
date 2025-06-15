@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Box, Typography, Container, Grid, Tooltip } from '@mui/material';
+import { Box, Typography, Container, } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -81,7 +81,7 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>
-          Parikshit M.
+          Parikshit Mali
         </Typography>
         <Typography variant="body2" sx={{ mb: 3 }}>
           Crafting scalable web solutions 🚀
