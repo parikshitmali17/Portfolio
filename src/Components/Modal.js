@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CallIcon from '@mui/icons-material/Call';
+import { useNavigate } from 'react-router-dom';
+// import * as React from 'react';
 
 const style = {
   position: 'absolute',
@@ -21,10 +23,21 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+   const navigate = useNavigate();
+   function handleNavigate(){
+    
+  navigate('/contact');
+  // Give the page time to mount before scrolling
+ handleOpen();
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 100); // slight delay ensures scroll happens after route loads
+// };
+  }
 
   return (
     <div>
-      <Button variant="contained" color="error" startIcon={<CallIcon />} onClick={handleOpen}>CONNECT WITH ME</Button>
+      <Button variant="contained" color="error" startIcon={<CallIcon />} onClick={handleNavigate}>CONNECT WITH ME</Button>
       <Modal
         open={open}
         onClose={handleClose}

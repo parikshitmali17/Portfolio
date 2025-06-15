@@ -339,6 +339,7 @@
 
 
 import React from "react";
+
 import {
   Box,
   Typography,
@@ -346,7 +347,7 @@ import {
   IconButton,
   Link,
   useTheme,
-  useMediaQuery,
+  useMediaQuery,Button
 } from "@mui/material";
 import { motion } from "framer-motion";
 import {
@@ -359,12 +360,20 @@ import {
   Instagram,
 } from "@mui/icons-material";
 
+import ProjectForm from "./ProjectForm";
+import { useNavigate } from 'react-router-dom';
+
 // 📌 Replace this with your correct path if using local image
 // import whatsappQR from "../assets/WtsAppQR.jpg";
 
 const Contact = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const navigate = useNavigate();
+
+  const handleSubmitProject=()=>{
+   navigate("/submitProjectDetails")
+  }
 
   return (
     <Box
@@ -429,8 +438,11 @@ const Contact = () => {
             <Stack direction="row" alignItems="center" spacing={1}>
               <Email fontSize="small" htmlColor="#ffffff" />
               <Typography variant="body1" sx={{ color: "#e0e0e0" }}>
-                Parikshitmali17@gmial.com
+                Parikshitmali17@gmail.com
               </Typography>
+              <Button variant="contained" color="success" onClick={handleSubmitProject}>
+  🚀 Submit Project Request
+</Button>
             </Stack>
             <Stack direction="row" alignItems="center" spacing={1} mt={1}>
               <LocationOn fontSize="small" htmlColor="#ffffff" />
@@ -487,6 +499,7 @@ const Contact = () => {
             </Stack>
           </Box>
 
+
           {/* 💬 WhatsApp QR Code Section */}
           <Box flex={1} textAlign="center">
             <Typography variant="h6" gutterBottom color="primary.light">
@@ -508,7 +521,9 @@ const Contact = () => {
               }}
             />
           </Box>
+          
         </Stack>
+                 
 
         {/* CTA Footer */}
         <Box textAlign="center" mt={6}>

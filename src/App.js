@@ -42,6 +42,7 @@ import SmallCarousel from './Components/SmallCoursel';
 import ProjectsGrid from './Components/ProjectGrid';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import ProjectForm from './Components/ProjectForm';
 
 function Home() {
   return (
@@ -62,7 +63,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<ProjectsGrid />} />
           <Route path="/About" element={<About></About>}></Route>
-           <Route path="/contact" element={<Contact></Contact>}></Route>
+           <Route path="/contacts" element={<Contact></Contact>}></Route>
+           <Route path="/submitProjectDetails" element={<ProjectForm></ProjectForm>}></Route>
         </Routes>
         {/* <Contact></Contact> */}
         <Footer />
