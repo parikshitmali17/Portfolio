@@ -62,8 +62,8 @@ solution:
 outcome:
   "Achieved fully modular deployment, cleaner role-based UI, and a smoother, scalable user experience.",
 
-  liveLink: "https://main-mfe-nu.vercel.app/", // Replace with actual deployed link
-  codeLink: "https://github.com/parikshitmali17/Main-MFE", // Replace with actual repo
+  liveLink: "https://main-mfe-nu.vercel.app/", 
+  codeLink: "https://github.com/parikshitmali17/Main-MFE", 
   tags: [
     "Micro Frontend", 
     "React", 
@@ -135,6 +135,11 @@ outcome:
   // liveLink: "", // Add your live link if deployed
   // codeLink: "https://github.com/parikshitm123/form-builder-question-paper", // Replace with your actual repo
   tags: ["THIS IS ONGOING PROJECT"],
+  images: [
+    "/Images/FormBuilder1.png",
+     "/Images/FormBuilder2.png",
+     "/Images/FormBuilder3.png"
+  ],
   
 }
 
