@@ -51,6 +51,32 @@ const ProjectsGrid = () => {
       images: ["/Images/HOMEEMAIL.png", "/Images/Modal.png","/Images/EmailUI.png"],
     },
     {
+  title: "HarmonyHub – Modular Music Library",
+  techStack: "React.js, Vite, Tailwind CSS, Module Federation, JWT (mock), Context API",
+  problem:
+  "Monolithic music apps lacked modularity and clean access control, making updates and scaling difficult.",
+
+solution:
+  "Built a micro frontend-based music library with module federation, mock JWT auth, and intuitive filtering via map, filter, and reduce.",
+
+outcome:
+  "Achieved fully modular deployment, cleaner role-based UI, and a smoother, scalable user experience.",
+
+  liveLink: "https://main-mfe-nu.vercel.app/", // Replace with actual deployed link
+  codeLink: "https://github.com/parikshitmali17/Main-MFE", // Replace with actual repo
+  tags: [
+    "Micro Frontend", 
+    "React", 
+    "JWT Auth", 
+  ],
+  images: [
+    "/Images/HarmonyHub1.png",
+    "/Images/HarmonyHub2.png",
+    "/Images/HarmonyHub3.png"
+  ],
+}
+,
+    {
   title: "Face Search AI App",
   techStack: "React.js, Bootstrap, Node.js, Express.js, MongoDB, Stripe API",
   problem:

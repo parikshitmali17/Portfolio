@@ -160,12 +160,11 @@ function Navbar() {
 
           {/* Profile Avatar */}
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="../Images/PASSPORT SIZE.jpg" />
               </IconButton>
-            </Tooltip>
-            <Menu
+           {/* open setting in Profile icons */}
+            {/* <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -180,7 +179,7 @@ function Navbar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
 
         </Toolbar>
