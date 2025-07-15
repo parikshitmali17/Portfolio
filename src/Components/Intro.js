@@ -410,7 +410,7 @@ export default function Intro() {
   }
 
   const stats = [
-    { icon: <AccountTreeIcon/>, value: "10+", label: "Succeful Projects" },
+    { icon: <AccountTreeIcon/>, value: "10+", label: "Successful Projects" },
    
     { icon: <Star />, value: "5+ ", label: "Technology Masterd" },
     { icon:  <GitHubIcon/>, value: "500+", label: "Git commits & counting" },
@@ -481,8 +481,8 @@ export default function Intro() {
                     animation: "fadeInUp 1s ease-out 0.2s both",
                   }}
                 >
-                  I create beautiful, responsive websites and applications that help businesses grow and succeed in the
-                  digital world.
+                  Code that Delivers Business Value  — Not Just Features. 
+                 End-to-End Development | Secure APIs | Real-Time Apps | AWS Serverless Architectures
                 </Typography>
 
                 {/* Action Buttons */}
