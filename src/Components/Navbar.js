@@ -17,7 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import AirplayOutlinedIcon from '@mui/icons-material/AirplayOutlined';
 
-const pages = ['About', 'Work', 'Contacts'];
+const pages = ["Home",'About', 'Work', 'Contacts'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -44,6 +44,9 @@ function Navbar() {
   const handleNavigation = (page) => {
     handleCloseNavMenu();
     switch (page) {
+      case 'Home':
+        navigate('/');
+        break;
       case 'About':
         navigate('/About');
         break;
@@ -64,24 +67,7 @@ function Navbar() {
         <Toolbar disableGutters>
 
           <AirplayOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'white' }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            onClick={() => navigate('/')}
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'white',
-              textDecoration: 'none',
-              cursor: 'pointer',
-            }}
-          >
-            Home
-          </Typography>
+        
 
           {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
