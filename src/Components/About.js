@@ -112,7 +112,7 @@ const AboutSection = () => {
       <Typography variant="h5" fontWeight="medium" gutterBottom>
         💻 Tech Stack I Work With
       </Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
+      {/* <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
         <Chip label="React" color="primary" />
         <Chip label="Node.js" color="primary" />
         <Chip label="Express" color="primary" />
@@ -124,7 +124,22 @@ const AboutSection = () => {
         <Chip label="API Gateway" color="secondary" />
         <Chip label="MUI" color="success" />
         
-      </Stack>
+      </Stack> */}
+      
+<Stack direction="row" flexWrap="wrap" sx={{ mb: 1.5}}>
+  <Chip label="React" color="primary" sx={{ m: 1 }} />
+  <Chip label="Node.js" color="primary" sx={{ m: 1 }} />
+  <Chip label="Express" color="primary" sx={{ m: 1 }} />
+  <Chip label="MongoDB" color="primary" sx={{ m: 1 }} />
+  <Chip label="PostgreSQL" color="primary" sx={{ m: 1 }} />
+  <Chip label="Bootstrap" color="secondary" sx={{ m: 1 }} />
+  <Chip label="AWS Cloud" color="secondary" sx={{ m: 1 }} />
+  <Chip label="AWS Lambda" color="secondary" sx={{ m: 1 }} />
+  <Chip label="API Gateway" color="secondary" sx={{ m: 1 }} />
+  <Chip label="MUI" color="success" sx={{ m: 1 }} />
+</Stack>
+
+
       <Typography variant="body2" sx={{ color: "#94a3b8" }}>
         I believe in writing clean, maintainable code that solves real problems, not just passes tests.
       </Typography>

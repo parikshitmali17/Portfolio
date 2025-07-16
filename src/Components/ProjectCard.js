@@ -44,14 +44,14 @@ const ProjectCard = ({
       )}
 
       <CardContent>
-        <Stack spacing={1}>
+        <Stack spacing={1} > 
           <Typography variant="h6" fontWeight="bold">
             {title}
           </Typography>
 
-          <Stack direction="row" spacing={1} flexWrap="wrap">
+          <Stack direction="row"  flexWrap="wrap" >
             {tags.map((tag, index) => (
-              <Chip key={index} label={tag} size="small" color="primary" />
+              <Chip key={index} label={tag} size="small" color="primary" sx={{ mr: 1, mb: 1 }} />
             ))}
           </Stack>
 
