@@ -1,99 +1,7 @@
 
 
-// import React from 'react';
-// import { Typography, useTheme, useMediaQuery, Box } from '@mui/material';
-// import '../App.css';
-// import BasicModal from './Modal';
-
-// function StreetLamp() {
-//   const theme = useTheme();
-//   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-//   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-
-//   const headingFontSize = isMobile ? '1.3rem' : isTablet ? '1.8rem' : '2.5rem';
-//   const subTextFontSize = isMobile ? '0.95rem' : isTablet ? '1.2rem' : '1.4rem';
-
-//   return (
-//     <>
-//       <Typography
-//         variant="h1"
-//         className="lamp-watermark"
-//         sx={{
-//           fontSize: headingFontSize,
-//           padding: '20px',
-//           textAlign: 'center',
-          
-//         }}
-//       >
-//         Build Smart. Scale Fast. Ship Globally. 🚀
-//       </Typography>
-
-//       <div className='lamps'>
-//         <input type="checkbox" name="btn" id="btn" defaultChecked />
-//         <div className="lamp-content">
-//           <div className="lamp-buildings">
-//             <div className="lamp-window"></div>
-//             <div className="lamp-window"></div>
-//             <div className="lamp-window"></div>
-//             <div className="lamp-window"></div>
-//             <div className="lamp-window"></div>
-//             <div className="lamp-window"></div>
-//           </div>
-
-//           <div className="lamp-ground">
-//             <div className="lamp-sewer"></div>
-//             <Typography
-//               component="h3"
-//               sx={{ pt: '145px', color: 'black', fontSize: subTextFontSize, px: 2 }}
-//             >
-//               Freelance Full-Stack & Serverless Developer turning your web ideas into scalable digital products.
-//             </Typography>
-//           </div>
-
-//           <div className="lamp-streetlamp">
-//             <Typography
-//               component="h3"
-//               sx={{
-//                 color: 'red',
-//                 paddingBottom: '200px',
-//                 paddingLeft: '50px',
-//                 paddingTop: '70px',
-//                 fontSize: subTextFontSize,
-//               }}
-//             >
-//               Light ME Up !
-//             </Typography>
-
-//             <div className="lamp-base" />
-//             <div className="lamp-basetop" />
-//             <div className="lamp-pole" />
-//             <div className="lamp-poletop" />
-//             <div className="lamp-head">
-//               <label htmlFor="btn"></label>
-//               <div className="lamp-top"></div>
-//               <div className="lamp-glass"></div>
-//               <div className="lamp-bot"></div>
-//             </div>
-//             <div className="lamp-light"></div>
-//             <div className="lamp-ground-light">
-//               <Box sx={{ display: 'flex', justifyContent: 'center', pt: '30px' }}>
-//                 <BasicModal />
-//               </Box>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default StreetLamp;
-
-
-
-"use client"
-
-// import React, { useState } from "react"
+// import React, { useState} from "react"
+// import { useNavigate } from 'react-router-dom';
 // import {
 //   Box,
 //   Container,
@@ -107,33 +15,40 @@
 //   Zoom,
 //   useTheme,
 //   useMediaQuery,
-//   IconButton,
 // } from "@mui/material"
-// import { Person, EmojiEvents, Star, LocalCafe, ArrowForward, PhotoCamera } from "@mui/icons-material"
+// import {
+//   Person,
+//   EmojiEvents,
+//   Star,
+//   LocalCafe,
+//   ArrowForward,
+// } from "@mui/icons-material"
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
-// export default function StreetLamp() {
+// export default function Intro() {
 //   const theme = useTheme()
 //   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+//    const navigate = useNavigate();
 
-
-  
 //   const handleViewWork = () => {
-//     console.log("View My Work clicked")
-//     // Add your navigation logic here
-//     alert("Navigating to portfolio...")
+  
+//     navigate("/work")
+  
 //   }
 
 //   const handleLetsTalk = () => {
-//     console.log("Let's Talk clicked")
-//     // Add your contact logic here
-//     alert("Opening contact form...")
+
+//     navigate("/Contacts")
+  
 //   }
 
 //   const stats = [
-//     { icon: <Person />, value: "50+", label: "Happy Clients" },
-//     { icon: <EmojiEvents />, value: "100+", label: "Projects Completed" },
-//     { icon: <Star />, value: "5.0", label: "Average Rating" },
-//     { icon: <LocalCafe />, value: "1000+", label: "Cups of Coffee" },
+//     { icon: <AccountTreeIcon/>, value: "10+", label: "Successful Projects" },
+   
+//     { icon: <Star />, value: "5+ ", label: "Technology Masterd" },
+//     { icon:  <GitHubIcon/>, value: "500+", label: "Git commits & counting" },
+//      { icon: <EmojiEvents/>, value: "1", label: "Patented Application" }
 //   ]
 
 //   return (
@@ -157,8 +72,7 @@
 //                   sx={{
 //                     width: { xs: 120, md: 150 },
 //                     height: { xs: 120, md: 150 },
-//                     border: "4px solid",
-//                     borderImage: "linear-gradient(45deg, #667eea 0%, #764ba2 100%) 1",
+//                     border: "none", // ✅ Removed border
 //                     borderRadius: "50%",
 //                     transition: "transform 0.3s ease-in-out",
 //                     "&:hover": {
@@ -166,24 +80,6 @@
 //                     },
 //                   }}
 //                 />
-                
-//                 <label htmlFor="profile-image-upload">
-//                   <IconButton
-//                     component="span"
-//                     sx={{
-//                       position: "absolute",
-//                       bottom: 0,
-//                       right: 0,
-//                       backgroundColor: "primary.main",
-//                       color: "white",
-//                       "&:hover": {
-//                         backgroundColor: "primary.dark",
-//                       },
-//                     }}
-//                   >
-//                     <PhotoCamera />
-//                   </IconButton>
-//                 </label>
 //               </Box>
 //             </Zoom>
 //           </Grid>
@@ -205,7 +101,7 @@
 //                     animation: "fadeInUp 1s ease-out",
 //                   }}
 //                 >
-//                   Full-Stack Developer
+//                   Full-Stack Developer || AWS Cloud Enthusiast
 //                 </Typography>
 
 //                 <Typography
@@ -219,8 +115,8 @@
 //                     animation: "fadeInUp 1s ease-out 0.2s both",
 //                   }}
 //                 >
-//                   I create beautiful, responsive websites and applications that help businesses grow and succeed in the
-//                   digital world.
+//                   Code that Delivers Business Value  — Not Just Features. 
+//                  End-to-End Development | Secure APIs | Real-Time Apps | AWS Serverless Architectures
 //                 </Typography>
 
 //                 {/* Action Buttons */}
@@ -278,7 +174,7 @@
 //                         },
 //                       }}
 //                     >
-//                       Let's Talk
+//                       Let's Connect
 //                     </Button>
 //                   </Box>
 //                 </Fade>
@@ -366,8 +262,12 @@
 
 
 
-import React, { useState} from "react"
-import { useNavigate } from 'react-router-dom';
+"use client"
+
+import React from "react"
+import { useNavigate } from "react-router-dom"
+import '../App.css';
+
 import {
   Box,
   Container,
@@ -383,40 +283,38 @@ import {
   useMediaQuery,
 } from "@mui/material"
 import {
-  Person,
   EmojiEvents,
   Star,
-  LocalCafe,
   ArrowForward,
+  Description, // Import the Description icon for the resume button
 } from "@mui/icons-material"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import GitHubIcon from "@mui/icons-material/GitHub"
+import AccountTreeIcon from "@mui/icons-material/AccountTree"
 
 export default function Intro() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down("md"))
-   const navigate = useNavigate();
 
+  const navigate = useNavigate()
   const handleViewWork = () => {
-  
     navigate("/work")
-  
+  }
+  const handleLetsTalk = () => {
+    navigate("/Contacts")
   }
 
-  const handleLetsTalk = () => {
-
-    navigate("/Contacts")
-  
+  // Function to handle viewing the resume
+  const handleViewResume = () => {
+    // Open the resume PDF in a new tab
+    window.open("../Resume/Parikshit_Mali_Resume.pdf", "_blank")
   }
 
   const stats = [
-    { icon: <AccountTreeIcon/>, value: "10+", label: "Successful Projects" },
-   
+    { icon: <AccountTreeIcon />, value: "10+", label: "Successful Projects" },
     { icon: <Star />, value: "5+ ", label: "Technology Masterd" },
-    { icon:  <GitHubIcon/>, value: "500+", label: "Git commits & counting" },
-     { icon: <EmojiEvents/>, value: "1", label: "Patented Application" }
+    { icon: <GitHubIcon />, value: "500+", label: "Git commits & counting" },
+    { icon: <EmojiEvents />, value: "1", label: "Patented Application" },
   ]
-
   return (
     <Box
       sx={{
@@ -449,7 +347,6 @@ export default function Intro() {
               </Box>
             </Zoom>
           </Grid>
-
           {/* Main Content */}
           <Grid item xs={12}>
             <Fade in timeout={1500}>
@@ -469,7 +366,6 @@ export default function Intro() {
                 >
                   Full-Stack Developer || AWS Cloud Enthusiast
                 </Typography>
-
                 <Typography
                   variant={isMobile ? "body1" : "h6"}
                   color="text.secondary"
@@ -481,10 +377,9 @@ export default function Intro() {
                     animation: "fadeInUp 1s ease-out 0.2s both",
                   }}
                 >
-                  Code that Delivers Business Value  — Not Just Features. 
-                 End-to-End Development | Secure APIs | Real-Time Apps | AWS Serverless Architectures
+                  Code that Delivers Business Value — Not Just Features. End-to-End Development | Secure APIs |
+                  Real-Time Apps | AWS Serverless Architectures
                 </Typography>
-
                 {/* Action Buttons */}
                 <Fade in timeout={2000}>
                   <Box
@@ -518,7 +413,28 @@ export default function Intro() {
                     >
                       View My Work
                     </Button>
-
+                    {/* New Resume Button */}
+                    <Button
+                      variant="contained"
+                      size="large"
+                      onClick={handleViewResume}
+                      endIcon={<Description />}
+                      sx={{
+                        background: "linear-gradient(45deg, #2193b0 0%, #6dd5ed 100%)", // A different gradient for distinction
+                        borderRadius: 3,
+                        px: 4,
+                        py: 1.5,
+                        textTransform: "none",
+                        fontSize: "1.1rem",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          transform: "translateY(-2px)",
+                          boxShadow: "0 8px 25px rgba(33, 147, 176, 0.4)",
+                        },
+                      }}
+                    >
+                      View Resume
+                    </Button>
                     <Button
                       variant="outlined"
                       size="large"
@@ -547,7 +463,6 @@ export default function Intro() {
               </Box>
             </Fade>
           </Grid>
-
           {/* Statistics Section */}
           <Grid item xs={12}>
             <Fade in timeout={2500}>
@@ -608,20 +523,8 @@ export default function Intro() {
           </Grid>
         </Grid>
       </Container>
-
       {/* Custom CSS for animations */}
-      <style jsx global>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+     
     </Box>
   )
 }
